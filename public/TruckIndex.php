@@ -2,14 +2,15 @@
 
 require_once '../src/Truck.php';
 
-$beepBeep = new Truck('white', 6, 'fuel', 40);
-echo $beepBeep->forward() . PHP_EOL;
-echo $beepBeep->brake() . PHP_EOL;
-echo $beepBeep->brake();
+$truck  = new Truck('white', 6, 'fuel', 40);
 
-echo $beepBeep->fullLoad(100);
-echo $beepBeep->getLoad();
-echo $beepBeep->fullLoad(100);
+echo $truck->forward() . PHP_EOL;
+echo $truck->brake() . PHP_EOL;
+echo $truck->brake();
 
-var_dump($beepBeep);
+echo $truck->fullLoad(100);
+echo $truck->getLoad();
+echo $truck->fullLoad(100);
+
+var_dump($truck);
 

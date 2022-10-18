@@ -2,7 +2,7 @@
 
 require_once 'Vehicle.php';
 
-class Bicycle extends Vehicle
+abstract class Bicycle extends Vehicle
 {
 }
 
