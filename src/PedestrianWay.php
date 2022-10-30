@@ -9,7 +9,7 @@ final class PedestrianWay extends Highway
 
     public function addVehicle($vehicle)
     {
-        if (!($vehicle instanceof Skateboard || $vehicle instanceof Bicycle))
+        if ($vehicle instanceof Skateboard || $vehicle instanceof Bicycle)
         $this->currentVehicles[] = $vehicle;
     }
 }

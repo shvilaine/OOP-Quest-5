@@ -9,3 +9,23 @@ var_dump($car);
 
 var_dump(Car::ALLOWED_ENERGIES);
 
+
+
+
+$car->setParkBrake(true);
+try {
+    echo ($car->start());
+} catch(Exception $e){
+    echo $e->getMessage();
+} finally {
+    echo "Ma voiture roule comme un donut";
+}
+
+$car->setParkBrake(false);
+try {
+    echo ($car->start());
+} catch(Exception $e){
+    echo $e->getMessage();
+} finally {
+    echo "Ma voiture roule comme un donut";
+}

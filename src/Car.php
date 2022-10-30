@@ -40,5 +40,26 @@ abstract class Car extends Vehicle
     {
         $this->energyLevel = $energyLevel;
     }
+
+    
+
+    private bool $parkBrake = true;
+
+    public function getParkBrake()
+    {
+        return $this->parkBrake;
+    }
+
+    public function setParkBrake(bool $hasParkBrake): void
+    {
+        $this->ParkBrake = $hasParkBrake;
+    }
+
+    public function start() {
+        if ($this->getParkBrake()) {
+            throw new Exception('Descend le frein à main!');
+        }
+        return 'Now go';
+    }
 }
 
