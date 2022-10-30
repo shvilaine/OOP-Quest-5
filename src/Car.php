@@ -26,7 +26,7 @@ abstract class Car extends Vehicle
     public function setEnergyType(string $energyType): Car
     {
         if (in_array($energyType, self::ALLOWED_ENERGIES)) {
-        $this->energyType = $energyType;
+            $this->energyType = $energyType;
         }
         return $this;
     }
@@ -41,7 +41,7 @@ abstract class Car extends Vehicle
         $this->energyLevel = $energyLevel;
     }
 
-    
+
 
     private bool $parkBrake = true;
 
@@ -55,11 +55,11 @@ abstract class Car extends Vehicle
         $this->ParkBrake = $hasParkBrake;
     }
 
-    public function start() {
-        if ($this->getParkBrake()) {
+    public function start()
+    {
+        if ($this->getParkBrake === true) {
             throw new Exception('Descend le frein à main!');
         }
         return 'Now go';
     }
 }
-
